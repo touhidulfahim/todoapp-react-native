@@ -38,6 +38,18 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
+      <View
+        style={{
+          backgroundColor: "#000",
+          height: Platform.OS === "ios" ? 20 : StatusBar.currentHeight,
+        }}
+      >
+        <StatusBar
+          translucent
+          backgroundColor="#00BCD4"
+          barStyle="light-content"
+        />
+      </View>
       <View style={styles.header}>
         <Text style={styles.headingText}>TODO APP</Text>
       </View>
