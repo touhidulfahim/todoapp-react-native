@@ -23,6 +23,7 @@ const InputItem = (props) => {
               { key: Math.random().toString(), value: props.inputVal },
             ]);
           }
+          props.setInputVal("");
         }}
       >
         <View style={styles.button}>
