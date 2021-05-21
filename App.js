@@ -61,6 +61,18 @@ export default function App() {
         setTodoList={setTodoList}
       />
       <TodoList todolist={todolist} handleSelectedTodo={handleSelectedTodo} />
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "flex-end",
+          position: "fixed",
+          marginBottom: 30,
+        }}
+      >
+        <Text>
+          {"\u00A9"} touhidulfahim {new Date().getFullYear()}
+        </Text>
+      </View>
     </View>
   );
 }
