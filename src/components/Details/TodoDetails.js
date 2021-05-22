@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Button,
 } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 const TodoDetails = (props) => {
   return (
@@ -29,13 +30,13 @@ const TodoDetails = (props) => {
                 props.handleDeleteItem(props.todo.key);
               }}
             >
-              <Text style={styles.buttonText}>Delete</Text>
+              <Icon name="trash" size={30} color="red" />
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.closeButton}
               onPress={() => props.handleHideModal()}
             >
-              <Text style={styles.buttonText}>Close</Text>
+              <Icon name="times-circle" size={30} color="gray" />
             </TouchableOpacity>
           </View>
         </View>
@@ -69,14 +70,11 @@ const styles = StyleSheet.create({
   },
   delbutton: {
     alignItems: "center",
-    backgroundColor: "red",
     padding: 10,
     borderRadius: 10,
   },
-  buttonText: { color: "white", fontSize: 15, fontWeight: "bold" },
   closeButton: {
     alignItems: "center",
-    backgroundColor: "gray",
     padding: 10,
     borderRadius: 10,
   },
