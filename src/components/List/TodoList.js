@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, FlatList } from "react-native";
-import ListItem from "./ListItem/ListItem";
+import ListItem from "../ListItem/ListItem";
 
 const TodoList = (props) => {
   return (
@@ -8,7 +8,7 @@ const TodoList = (props) => {
       style={{
         width: "100%",
       }}
-      data={props.todolist}
+      data={props.todoList}
       renderItem={(info) => {
         return (
           <ListItem

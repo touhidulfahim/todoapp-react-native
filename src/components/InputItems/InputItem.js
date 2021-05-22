@@ -18,8 +18,7 @@ const InputItem = (props) => {
       <TouchableHighlight
         onPress={() => {
           if (props.inputVal !== "") {
-            props.setTodoList([
-              ...props.todolist,
+            props.addTodo([
               { key: Math.random().toString(), value: props.inputVal },
             ]);
           }
