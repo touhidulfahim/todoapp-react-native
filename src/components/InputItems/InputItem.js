@@ -5,6 +5,7 @@ import {
   View,
   TextInput,
   TouchableHighlight,
+  TouchableOpacity,
 } from "react-native";
 const InputItem = (props) => {
   return (
@@ -15,20 +16,11 @@ const InputItem = (props) => {
         value={props.inputVal}
         onChangeText={(inputVal) => props.setInputVal(inputVal)}
       />
-      <TouchableHighlight
-        onPress={() => {
-          if (props.inputVal !== "") {
-            props.addTodo([
-              { key: Math.random().toString(), value: props.inputVal },
-            ]);
-          }
-          props.setInputVal("");
-        }}
-      >
-        <View style={styles.button}>
-          <Text style={styles.btnLabel}>ADD</Text>
-        </View>
-      </TouchableHighlight>
+      <View>
+        <TouchableOpacity>
+          <Tex>Upload image</Tex>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -39,7 +31,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: 40,
+    marginTop: 5,
     padding: 20,
   },
   input: {

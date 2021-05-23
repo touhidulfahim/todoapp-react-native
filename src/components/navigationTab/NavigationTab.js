@@ -11,21 +11,21 @@ const NavigationTab = (props) => {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Share"
+        name="Add"
         component={ShareTodo}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon color={color} name="share-alt" size={size} />
+            <Icon color={color} name="download" size={size} />
           ),
         }}
       />
 
       <Tab.Screen
-        name="Find"
+        name="List"
         component={FindTodo}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon color={color} name="search" size={size} />
+            <Icon color={color} name="list" size={size} />
           ),
         }}
       />
